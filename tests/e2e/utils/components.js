@@ -69,7 +69,7 @@ const completeOnboardingWizard = async () => {
 	// Wait for usage tracking pop-up window to appear
 	await page.waitForSelector( '.components-modal__header-heading' );
 	await expect( page ).toMatchElement(
-		'.components-modal__header-heading', { text: 'Build a better WooCommerce' }
+		'.components-modal__header-heading', { text: 'Build a Better WooCommerce' }
 	);
 
 	// Query for "Continue" buttons
@@ -121,11 +121,11 @@ const completeOnboardingWizard = async () => {
 	}
 
 	// Wait for "Continue" button to become active
-	await page.waitForSelector( 'button.is-primary:not(:disabled)' );
+	await page.waitForSelector( 'button.woocommerce-profile-wizard__continue:not(:disabled)' );
 
 	await Promise.all( [
 		// Click on "Continue" button to move to the next step
-		page.click( 'button.is-primary' ),
+		page.click( 'button.woocommerce-profile-wizard__continue' ),
 
 		// Wait for "Tell us about your business" section to load
 		page.waitForNavigation( { waitUntil: 'networkidle0' } ),
@@ -186,9 +186,9 @@ const completeOnboardingWizard = async () => {
 	await page.waitForSelector( '.woocommerce-profile-wizard__header-title' );
 
 	// Wait for "No thanks" button to become active
-	await page.waitForSelector( 'button.is-secondary:not(:disabled)' );
+	await page.waitForSelector( 'button.is-default:not(:disabled)' );
 	// Click on "No thanks" button to move to the next step
-	await page.click( 'button.is-secondary' );
+	await page.click( 'button.is-default' );
 
 	// End of onboarding wizard
 
