@@ -67,7 +67,7 @@
     "lerna": "3.20.2",
     "lint-staged": "9.5.0",
     "mocha": "7.2.0",
-    "node-sass": "4.13.0",
+    "node-sass": "4.13.1",
     "prettier": "github:automattic/calypso-prettier#c56b4251",
     "puppeteer": "2.0.0",
     "puppeteer-utils": "github:Automattic/puppeteer-utils#0f3ec50",
